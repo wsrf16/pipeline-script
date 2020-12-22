@@ -1,0 +1,44 @@
+#spring:
+#  datasource:
+#    master:
+##      type: com.alibaba.druid.pool.DruidDataSource
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      jdbc-url: jdbc:mysql://10.124.163.66:3306/tdatabase?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&autoReconnect=true&allowMultiQueries=true&useCursorFetch=true
+#      username: mysql
+#      password: KLAdla@daljf376
+#      mybatis:
+#        mapper-locations: classpath:mapper/*.xml
+#
+#    slave:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://10.124.163.66:3306/tdatabase?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&autoReconnect=true&allowMultiQueries=true&useCursorFetch=true
+#      username: mysql
+#      password: KLAdla@daljf376
+#      jpa:
+#        database: mysql
+#        show-sql: true
+#        open-in-view: false
+#        hibernate:
+#          naming:
+#            physical_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+#        properties:
+#          hibernate:
+#            dialect: org.hibernate.dialect.MySQL57Dialect
+#            physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+#
+#  log:
+#    rabbitmq:
+#      enable: true
+#      host: 10.124.163.95
+#      port: 5672
+#      username: admin
+#      password: admin
+#      virtual-host: /
+#      es-index: @project.deploy.finalName@-@profiles.active@-skyladder-log
+#      publisher-confirms: true                # 支持发布确认
+#      publisher-returns: true                 # 支持发布返回
+#      binding-list:
+#      - type: direct
+#        routing-key: application-log-queue
+#        queue: application-log-queue
+#        exchange: application-log-exchange
