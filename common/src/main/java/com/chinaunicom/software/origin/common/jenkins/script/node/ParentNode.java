@@ -73,7 +73,8 @@ public abstract class ParentNode {
         return toScript(0);
     }
 
-    private ScriptNode toNode(Class<? extends ParentNode> clazz, Map.Entry<String, PropertyDescriptor> entry) {
+    private ScriptNode toNode(Map.Entry<String, PropertyDescriptor> entry) {
+        Class<? extends ParentNode> clazz = this.getClass();
         ScriptMark annotation = BeanSugar.PropertyDescriptors.getAnnotationIncludeParents(clazz, entry.getValue(), ScriptMark.class);
         PropertyDescriptor propertyDescriptor = entry.getValue();
         NodeType nodeType = annotation == null ? NodeType.Complex : annotation.type();
@@ -86,9 +87,8 @@ public abstract class ParentNode {
     public String toScript(int level) {
         Map<String, PropertyDescriptor> map = BeanSugar.PropertyDescriptors.toNamePropertyMapExceptNull(this);
         StringBuilder sb = new StringBuilder();
-        Class<? extends ParentNode> clazz = this.getClass();
         for (Map.Entry<String, PropertyDescriptor> entry : map.entrySet()) {
-            ScriptNode node = toNode(clazz, entry);
+            ScriptNode node = toNode(entry);
             if (BUILD_IN_KEYWORDS.contains(node.getName()))
                 continue;
 
