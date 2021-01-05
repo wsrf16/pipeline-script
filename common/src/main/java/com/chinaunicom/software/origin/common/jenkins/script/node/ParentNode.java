@@ -1,11 +1,11 @@
 package com.chinaunicom.software.origin.common.jenkins.script.node;
 
 import com.aio.portable.swiss.global.Constant;
-import com.aio.portable.swiss.sugar.StringSugar;
+import com.aio.portable.swiss.sugar.LinuxSugar;
 import com.aio.portable.swiss.suite.bean.BeanSugar;
-import com.chinaunicom.software.origin.common.jenkins.script.refer.ScriptNode;
 import com.chinaunicom.software.origin.common.jenkins.script.refer.NodeType;
 import com.chinaunicom.software.origin.common.jenkins.script.refer.ScriptMark;
+import com.chinaunicom.software.origin.common.jenkins.script.refer.ScriptNode;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
@@ -147,7 +147,7 @@ public abstract class ParentNode {
 
     private String formatBlock() {
         String block = getBlock();
-        String formatBlock = StringSugar.Linux.setVariable(block, this);
+        String formatBlock = LinuxSugar.setVariable(block, this);
         return formatBlock;
     }
 
