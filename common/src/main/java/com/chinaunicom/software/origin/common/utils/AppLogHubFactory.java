@@ -1,6 +1,6 @@
 package com.chinaunicom.software.origin.common.utils;
 
-import com.aio.portable.swiss.suite.log.LogHub;
+import com.aio.portable.swiss.suite.log.facade.LogHub;
 import com.aio.portable.swiss.suite.log.factory.LogHubFactory;
 import com.aio.portable.swiss.suite.log.impl.es.rabbit.RabbitMQLog;
 import com.aio.portable.swiss.suite.log.impl.slf4j.Slf4JLog;

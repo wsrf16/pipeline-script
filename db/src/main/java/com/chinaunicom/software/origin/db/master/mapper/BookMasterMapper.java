@@ -1,6 +1,6 @@
 package com.chinaunicom.software.origin.db.master.mapper;
 
-import com.aio.portable.swiss.suite.storage.rds.freedatasource.TargetDataSource;
+import com.aio.portable.swiss.suite.storage.db.freedatasource.TargetDataSource;
 import com.chinaunicom.software.origin.db.master.model.Book;
 
 import java.util.List;

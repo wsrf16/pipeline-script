@@ -1,6 +1,6 @@
 package com.chinaunicom.software.origin.service.main;
 
-import com.aio.portable.swiss.suite.storage.rds.jpa.JPASugar;
+import com.aio.portable.swiss.suite.storage.db.jpa.JPASugar;
 import com.chinaunicom.software.origin.db.slave.mapper.BookSlaveRepository;
 import com.chinaunicom.software.origin.db.slave.model.Book;
 import com.chinaunicom.software.origin.db.slave.vo.BookCondition;

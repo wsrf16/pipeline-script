@@ -1,9 +1,9 @@
 package com.chinaunicom.software.origin.db.slave.mapper;
 
-import com.aio.portable.swiss.suite.storage.rds.jpa.BaseJpaRepository;
 import com.chinaunicom.software.origin.db.slave.model.Book;
+import org.springframework.data.jpa.repository.support.JpaRepositoryImplementation;
 
 
-public interface BookSlaveRepository extends BaseJpaRepository<Book, Long> {
+public interface BookSlaveRepository extends JpaRepositoryImplementation<Book, Long> {
 
 }

@@ -3,7 +3,7 @@ package com.chinaunicom.software.origin.api.timer;
 import com.aio.portable.swiss.schedule.timer.AbstractTask;
 import com.aio.portable.swiss.schedule.timer.Launcher;
 import com.aio.portable.swiss.suite.bean.serializer.json.JacksonSugar;
-import com.aio.portable.swiss.suite.log.LogHub;
+import com.aio.portable.swiss.suite.log.facade.LogHub;
 import com.chinaunicom.software.origin.common.config.root.ApplicationConfig;
 import com.chinaunicom.software.origin.common.config.root.children.LauncherConfig;
 import com.chinaunicom.software.origin.common.jenkins.script.node.PipelineObject;
@@ -67,52 +67,6 @@ public class AutoRunner implements CommandLineRunner {
 
 
         PipelineObject pipelineObject = jobService.buildDemo2();
-
-        String frontPipeline = "{\n" +
-                "\t\"pipeline\": {\n" +
-                "\t\t\"agent\": \"any\",\n" +
-                "\t\t\"stages\": {\n" +
-                "\t\t\t\"stageList\": [{\n" +
-                "\t\t\t\t\"name\": \"阶段1\",\n" +
-                "\t\t\t\t\"parallel\": {\n" +
-                "\t\t\t\t\t\"stageList\": [{\n" +
-                "\t\t\t\t\t\t\"name\": \"并行1\",\n" +
-                "\t\t\t\t\t\t\"stagesList\": [{\n" +
-                "\t\t\t\t\t\t\t\"stageList\": [{\n" +
-                "\t\t\t\t\t\t\t\t\"name\": \"CQM1\"\n" +
-                "\t\t\t\t\t\t\t}, {\n" +
-                "\t\t\t\t\t\t\t\t\"name\": \"CQM2\"\n" +
-                "\t\t\t\t\t\t\t}]\n" +
-                "\t\t\t\t\t\t}]\n" +
-                "\t\t\t\t\t}, {\n" +
-                "\t\t\t\t\t\t\"name\": \"并行2\",\n" +
-                "\t\t\t\t\t\t\"stagesList\": [{\n" +
-                "\t\t\t\t\t\t\t\"stageList\": [{\n" +
-                "\t\t\t\t\t\t\t\t\"name\": \"soner1\"\n" +
-                "\t\t\t\t\t\t\t}, {\n" +
-                "\t\t\t\t\t\t\t\t\"name\": \"soner2\"\n" +
-                "\t\t\t\t\t\t\t}]\n" +
-                "\t\t\t\t\t\t}]\n" +
-                "\t\t\t\t\t}]\n" +
-                "\t\t\t\t}\n" +
-                "\t\t\t}, {\n" +
-                "\t\t\t\t\"name\": \"阶段2\",\n" +
-                "\t\t\t\t\"parallel\": {\n" +
-                "\t\t\t\t\t\"stageList\": [{\n" +
-                "\t\t\t\t\t\t\"name\": \"CheckLine1\",\n" +
-                "\t\t\t\t\t\t\"stagesList\": [{\n" +
-                "\t\t\t\t\t\t\t\"stageList\": [{\n" +
-                "\t\t\t\t\t\t\t\t\"name\": \"CQM1\"\n" +
-                "\t\t\t\t\t\t\t}, {\n" +
-                "\t\t\t\t\t\t\t\t\"name\": \"CQM2\"\n" +
-                "\t\t\t\t\t\t\t}]\n" +
-                "\t\t\t\t\t\t}]\n" +
-                "\t\t\t\t\t}]\n" +
-                "\t\t\t\t}\n" +
-                "\t\t\t}]\n" +
-                "\t\t}\n" +
-                "\t}\n" +
-                "}";
 
 //        PipelineObject pipelineObject = JacksonSugar.json2T(frontPipeline, PipelineObject.class);
 

@@ -1,7 +1,7 @@
 package com.chinaunicom.software.origin.db.slave.vo;
 
-import com.aio.portable.swiss.suite.storage.rds.jpa.annotation.order.OrderBy;
-import com.aio.portable.swiss.suite.storage.rds.jpa.annotation.where.*;
+import com.aio.portable.swiss.suite.storage.db.jpa.annotation.order.OrderBy;
+import com.aio.portable.swiss.suite.storage.db.jpa.annotation.where.*;
 import com.chinaunicom.software.origin.db.slave.model.Book;
 import org.springframework.data.domain.Sort;
 

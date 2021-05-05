@@ -2,8 +2,7 @@ package com.chinaunicom.software.origin.api.controller;
 
 import com.aio.portable.swiss.hamlet.bean.ResponseWrapper;
 import com.aio.portable.swiss.hamlet.bean.ResponseWrapperUtils;
-import com.aio.portable.swiss.suite.log.LogHub;
-import com.aio.portable.swiss.suite.log.annotation.LogMarker;
+import com.aio.portable.swiss.suite.log.facade.LogHub;
 import com.chinaunicom.software.origin.common.utils.AppLogHubFactory;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;

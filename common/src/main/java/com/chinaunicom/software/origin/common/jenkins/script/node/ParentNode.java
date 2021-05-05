@@ -1,7 +1,7 @@
 package com.chinaunicom.software.origin.common.jenkins.script.node;
 
 import com.aio.portable.swiss.global.Constant;
-import com.aio.portable.swiss.sugar.LinuxSugar;
+import com.aio.portable.swiss.sugar.ShellSugar;
 import com.aio.portable.swiss.suite.bean.BeanSugar;
 import com.chinaunicom.software.origin.common.jenkins.script.refer.NodeType;
 import com.chinaunicom.software.origin.common.jenkins.script.refer.ScriptMark;
@@ -147,7 +147,7 @@ public abstract class ParentNode {
 
     private String formatBlock() {
         String block = getBlock();
-        String formatBlock = LinuxSugar.setVariable(block, this);
+        String formatBlock = ShellSugar.setVariable(block, this);
         return formatBlock;
     }
 

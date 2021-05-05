@@ -1,6 +1,6 @@
 package com.chinaunicom.software.origin.api.config;
 
-import com.aio.portable.swiss.autoconfigure.properties.Swagger2Properties;
+import com.aio.portable.swiss.factories.autoconfigure.properties.Swagger2Properties;
 import com.aio.portable.swiss.hamlet.swagger.SwaggerStatus;
 import com.chinaunicom.software.origin.api.controller.DemoController;
 import com.chinaunicom.software.origin.common.utils.BizStatusEnum;
